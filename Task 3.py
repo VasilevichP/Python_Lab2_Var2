@@ -9,13 +9,13 @@ def find_max_index(arr):
     max_col = 0
 
     for row in range(len(arr)):
-        for col in range(len(arr[row])):
-            if arr[row][col] > max_value:
-                max_value = arr[row][col]
-                max_row = row
-                max_col = col
+         k=max(arr[row])
+         if k>max_value:
+            max_value=k
+            max_row=row
+            max_col=arr[row].index(k)
 
-    return max_row, max_col
+    print("Индексы первого вхождения максимального элемента: [", max_row,"][", max_col,"]")
 
 
 rows = random.randint(1, 6)
@@ -30,5 +30,4 @@ for i in range(rows):
         row.append(a)
     matrix.append(row)
     print(row)
-max_row, max_col = find_max_index(matrix)
-print("Индексы первого вхождения максимального элемента: [", max_row,"][", max_col,"]")
+find_max_index(matrix)
