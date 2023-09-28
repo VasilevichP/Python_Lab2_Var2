@@ -9,12 +9,14 @@ def isAnagram(str1, str2):
 while True:
     word1 = input("Введите первое слово: ")
     if word1.isalpha():
+        word1=word1.lower()
         break
     else:
         print("Введено небуквенное слово")
 while True:
     word2 = input("Введите второе слово: ")
     if word2.isalpha():
+        word2=word2.lower()
         break
     else:
         print("Введено небуквенное слово")
